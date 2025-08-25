@@ -1,0 +1,4 @@
+/cache
+*.log
+/.idea 
+.idea/php.xml
