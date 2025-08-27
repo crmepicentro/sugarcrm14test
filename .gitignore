@@ -1,4 +1,91 @@
-/cache
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
 *.log
-/.idea 
-.idea/php.xml
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#######PHP STORM
+
+####### RECOMENDACION SUGARCRM
+*.log
+/cache
+/config.php
+#/cron.php
+/config_override.php
+/.htaccess
+/custom/application
+/custom/history
+/custom/modules/*/Ext
+/custom/blowfish
+/upload/*
+/.idea/
+/.DS_Store
+/custom/modules/Connectors/metadata/connectors.php
+*config.js
+*orderMapping.php
+/custom/Extension/application/Ext/JSGroupings/orderMapping.php
+/custom/Extension/application/Ext/EntryPointRegistry/orderMapping.php
+/custom/Extension/application/Ext/Include/orderMapping.php
+/custom/Extension/modules/*/Ext/Vardefs/*orderMapping.php
+/custom/Extension/modules/*/Ext/Language/*orderMapping.php
+/custom/Extension/application/Ext/Language/*orderMapping.php
+/custom/Extension/application/Ext/LogicHooks/orderMapping.php
+/custom/Extension/application/Ext/TableDictionary/orderMapping.php
+/custom/Extension/modules/*/Ext/Dependencies/orderMapping.php
+/custom/Extension/modules/*/Ext/Layoutdefs/orderMapping.php
+/custom/Extension/modules/*/Ext/LogicHooks/orderMapping.php
+/custom/Extension/modules/*/Ext/WirelessLayoutdefs/orderMapping.php
+/custom/Extension/modules/*/Ext/Administration/orderMapping.php
+/custom/Extension/modules/*/Ext/ScheduledTasks/orderMapping.php
+/custom/Extension/application/Ext/Platforms/orderMapping.php
+/custom/Extension/modules/*/Ext/Vardefs/full_text_search_admin.php
+####### END RECOMENDACION SUGARCRM
+
+.idea/*
+/custom/.idea/*
+/custom/Backend/Config.php
+/custom/themes/default/images/company_logo.png
+/custom/Backend/Libraries/Php/dompdf/lib/fonts/log.htm
+
+/custom/Backend/Applications/Landing/KilometrosTGO/uploads/
+
+!/custom/Backend/Applications/Landing/KilometrosTGO/uploads/index.php
+
+/custom/Backend/autoloadtest.php
+.user.ini
+.php.ini
+custom/Backend/Config_dev.php
+error_log_cron.txt
+.phpunit.result.cache
