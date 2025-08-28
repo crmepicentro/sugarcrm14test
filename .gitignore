@@ -89,3 +89,5 @@ Thumbs.db
 custom/Backend/Config_dev.php
 error_log_cron.txt
 .phpunit.result.cache
+config.php
+config.php

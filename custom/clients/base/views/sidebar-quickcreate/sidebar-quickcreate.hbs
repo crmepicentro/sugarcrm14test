@@ -13,27 +13,51 @@
 <div class="sidebar-nav-flyout-actions">
     <ul role="menu" class="m-0">
         <li role="menuitem" data-flyout-action="close">
-                        <span sfuuid="1" class="quickcreate">
-
-            <button data-action="abrir"
-                    class="actionLink megamenu-dropdown-item w-full bg-transparent py-2 px-3 flex flex-row items-center text-xs text-[--text-color] hover:bg-[--dropdown-link-background-hover]">
-
-
+            <span sfuuid="1">
+            <button
+                    data-action="abrir"
+                    class="actionLink megamenu-dropdown-item w-full bg-transparent py-2 px-3 flex flex-row items-center text-xs text-[--text-color] hover:bg-[--dropdown-link-background-hover]"
+            >
             <i class="sicon sicon-phone-lg mr-2"></i>
-
-            <span class="ellipsis_inline" data-bs-placement="bottom" data-bs-original-title="Nuevo Boton">
-                Nuevo Boton
+            <span class="ellipsis_inline" data-bs-placement="bottom" data-bs-original-title="Nuevo Side Drawer">
+                Nuevo Side Drawer
             </span>
-
         </button>
         </span>
         </li>
-
+        <li role="menuitem" data-flyout-action="close">
+            <span sfuuid="2">
+            <button
+                    data-action="open-modal"
+                    class="actionLink megamenu-dropdown-item w-full bg-transparent py-2 px-3 flex flex-row items-center text-xs text-[--text-color] hover:bg-[--dropdown-link-background-hover]"
+            >
+            <i class="sicon sicon-phone-lg mr-2"></i>
+            <span class="ellipsis_inline" data-bs-placement="bottom" data-bs-original-title="Nuevo Modal">
+                Nuevo Modal
+            </span>
+        </button>
+        </span>
+        </li>
+        <li role="menuitem" data-flyout-action="close">
+            <span sfuuid="3">
+            <button
+                    data-action="newtrafico"
+                    class="actionLink megamenu-dropdown-item w-full bg-transparent py-2 px-3 flex flex-row items-center text-xs text-[--text-color] hover:bg-[--dropdown-link-background-hover]"
+            >
+            <i class="sicon sicon-phone-lg mr-2"></i>
+            <span class="ellipsis_inline" data-bs-placement="bottom" data-bs-original-title="Nuevo Tráfico">
+                Nuevo Tráfico
+            </span>
+        </button>
+        </span>
+        </li>
+        {{!--
+        /*
         {{#each createMenuItems}}
             <li role="menuitem" data-flyout-action="close">
                 {{field ../this model=model template='quickcreate'}}
             </li>
         {{/each}}
-
+        --}}
     </ul>
 </div>
