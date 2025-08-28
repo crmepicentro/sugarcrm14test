@@ -46,7 +46,7 @@
         }
     },
     openModal: function () {
-        alert('openModal');
+        console.log('openModal: Open');
         // Trigger del modal
         this.layout.trigger('your-modal-event-name', {
             // Configuración del modal
@@ -79,7 +79,6 @@
     },
 
     openUrlDrawer: function (event) {
-        alert('openUrlDrawer');
         console.log('openUrlDrawer');
         var activeDrawerLayout = app.drawer.getActive(),
             $shortcutButton = this.$('[data-action=newtrafico]');
@@ -104,6 +103,7 @@
         }
     },
     openSideDrawer: function (event) {
+        console.log('openSideDrawer: Open');
         if (app.sideDrawer && app.sideDrawer.isOpen()) {
             app.sideDrawer.close();
         } else {
