@@ -83,11 +83,10 @@
         var activeDrawerLayout = app.drawer.getActive(),
             $shortcutButton = this.$('[data-action=newtrafico]');
         var context = this.context;
-        var host = document.domain;
-        context.position = '';
-        context.title = $shortcutButton[0].ariaLabel;
-        context.url = host + "/" + $shortcutButton[0].dataset.url;
-
+        context.title = "Solicitud de Avalúo : Sistema S3S : Cualquier novedad/inconveniente con esta pantalla del S3S reportarla a <b>IT-CENTRIC</b>";
+        context.url ="https://www.casabaca.com/";
+        context.typeDrawer='drawer';
+        context.hasHeader=true;
         if (!activeDrawerLayout || activeDrawerLayout.name !== 'iframelayout') {
             $shortcutButton.addClass('active');
             if (context.url != '') {
@@ -103,11 +102,34 @@
         }
     },
     openSideDrawer: function (event) {
+        $shortcutButton = this.$('[data-action=abrir]');
         console.log('openSideDrawer: Open');
         if (app.sideDrawer && app.sideDrawer.isOpen()) {
             app.sideDrawer.close();
         } else {
-            app.sideDrawer.open();
+            $shortcutButton.addClass('active');
+            var context = this.context;
+            context.title = "Nuevo Trafico";
+            context.typeDrawer='sideDrawer';
+            context.hasHeader=false;
+            context.url ="https://www.casabaca.com/";
+            var drawerConfigs = {
+                top: '200px',
+                bottom: 0,
+                right: 0,
+                left: '60%',
+            };
+            app.sideDrawer.config(drawerConfigs);
+
+            app.sideDrawer.open({
+                layout: 'iframelayout',
+                context: context,
+                hasTitle: true,
+                dashboardName: "Nuevo Trafico",
+                isFocusDashboard: true,
+            }, function () {
+                $shortcutButton.removeClass('active');
+            }, true);
         }
     },
 })

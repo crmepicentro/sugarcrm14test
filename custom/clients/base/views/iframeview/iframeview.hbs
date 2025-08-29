@@ -1,0 +1,64 @@
+<div id="styleguide" class="main-pane">
+{{#if hasHeader}}
+    <div class="headerpane" id="headerpane" >
+            <div class="record-cell toleft">
+                <span class="module-title s3s-view">{{{title}}}</span>
+                {{#if label}}
+                    <span class="s3s-view-label">{{{label}}}</span>
+                {{/if}}
+                {{#if more}}
+                    <span class="s3s-view-contact">{{{more}}}</span>
+                {{/if}}
+            </div>
+
+            <div class="btn-toolbar toright">
+                <a class="btn btn-primary" href="javascript:void(0);" name="cancel_button">{{str
+                        'LBL_CLOSE_BUTTON_LABEL'}}</a>
+            </div>
+    </div>
+{{/if}}
+    <div class='iframe-container'>
+        <iframe id="cstm_crm_view" src="{{{url}}}" frameborder="0" class='iframe-container' width="100%"></iframe>
+    </div>
+</div>
+
+
+<style>
+
+    #styleguide{
+        width: 100%;
+    }
+
+    #headerpane {
+        overflow: hidden;
+        width: 100%;
+    }
+    .drawer .main-pane {
+        top: 0;
+    }
+    .iframe-container {
+        width: 100%;
+        height: 100%;
+    }
+    .toleft {
+        float: left;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .toright {
+        float: right;
+    }
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const iframe = document.getElementById('cstm_crm_view');
+
+        console.log("iframe custom");
+        iframe.onerror = function () {
+            console.log("Murio el S3S... :( ")
+        };
+    });
+</script>
